@@ -12,19 +12,21 @@ set path+=**
 
 " display all matching files when we tab complete
 set wildmenu
+set wildignore+=**/node_modules/**
+
 
 " create the `tags` file
 command! MakeTags  !ctags -R .
 
-" Tweaks for browsing
-let g:netrw_browse_split=4 " open in prior window
-let g:netrw_altv=1 " open splits to the right
-let g:netrw_liststyle=3 " tree view
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-" - :edit a folder to open a file browser
-" - <CR>/v/t to open in an h-split/v-split/tab
-" - check |netrw-browse-maps| for more mappings
+"" Tweaks for browsing
+"let g:netrw_browse_split=4 " open in prior window
+"let g:netrw_altv=1 " open splits to the right
+"let g:netrw_liststyle=3 " tree view
+"let g:netrw_list_hide=netrw_gitignore#Hide()
+"let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+"" - :edit a folder to open a file browser
+"" - <CR>/v/t to open in an h-split/v-split/tab
+"" - check |netrw-browse-maps| for more mappings
 
 " show what you're typing on the bottom
 set showcmd
@@ -45,3 +47,13 @@ set incsearch
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" disable arrow keys in insert and normal mode
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
