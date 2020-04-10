@@ -3,6 +3,9 @@ syntax on
 " enter current millenium
 set nocompatible
 
+" show current filename all the time
+set laststatus=2
+
 " enable plugins
 filetype plugin on
 
