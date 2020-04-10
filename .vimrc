@@ -9,6 +9,9 @@ set laststatus=2
 " enable plugins
 filetype plugin on
 
+" allow dictionary autocomplete when set spell is on
+set complete+=kspell
+
 " search down into subfolders
 " Provides tab-completion for all file-related tasks
 set path+=**
@@ -16,7 +19,6 @@ set path+=**
 " display all matching files when we tab complete
 set wildmenu
 set wildignore+=**/node_modules/**
-
 
 " create the `tags` file
 command! MakeTags  !ctags -R .
