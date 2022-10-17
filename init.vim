@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
+Plug 'andymass/vim-matchup'
 call plug#end()
 
 autocmd vimenter * colorscheme gruvbox

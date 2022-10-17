@@ -78,9 +78,6 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
-" add matchit to vim for smarter % jumps
-packadd! matchit
-
 " auto-insert closing } when typing {
 inoremap {<CR>  {<CR>}<Esc>O
 
