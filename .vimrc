@@ -89,3 +89,5 @@ set termguicolors
 set background=dark     "setting dark mode
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGray ctermbg=NONE
 
+" sync the system and vim clipboard
+set clipboard=unnamedplus
