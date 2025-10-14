@@ -1,6 +1,6 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
-set packpath=~/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,~/.vim/after
+set packpath=~/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim82,/usr/share/vim/vimfiles/after,~/.vim/after
 source ~/.vimrc
 call plug#begin('~/.vim/plugged')
 Plug 'mileszs/ack.vim'
@@ -9,8 +9,12 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
+Plug 'connorholyday/vim-snazzy'
 Plug 'quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
+Plug 'fatih/vim-go'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ThePrimeagen/vim-be-good'
 call plug#end()
 
 autocmd vimenter * colorscheme gruvbox

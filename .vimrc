@@ -63,7 +63,10 @@ set incsearch
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-set nohlsearch
+" highlight search results
+set hlsearch
+" map ESCAPE key to clear search highlights
+map <esc> :noh<cr>
 set nowrap
 
 set cursorline " highlights cursor's line and linenum
@@ -78,9 +81,6 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
-" add matchit to vim for smarter % jumps
-packadd! matchit
-
 " auto-insert closing } when typing {
 inoremap {<CR>  {<CR>}<Esc>O
 
@@ -92,3 +92,21 @@ set termguicolors
 set background=dark     "setting dark mode
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGray ctermbg=NONE
 
+" Use a line cursor within insert mode and a block cursor everywhere else.
+"
+" Reference chart of values:
+"   Ps = 0  -> blinking block.
+"   Ps = 1  -> blinking block (default).
+"   Ps = 2  -> steady block.
+"   Ps = 3  -> blinking underline.
+"   Ps = 4  -> steady underline.
+"   Ps = 5  -> blinking bar (xterm).
+"   Ps = 6  -> steady bar (xterm).
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" map <Esc> to exit terminal-mode
+:tnoremap <Esc> <C-\><C-n>
+
+" show relative line numbers for help with jumping
+set relativenumber
