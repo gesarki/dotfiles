@@ -110,3 +110,5 @@ let &t_EI = "\e[2 q"
 
 " show relative line numbers for help with jumping
 set relativenumber
+" sync the system and vim clipboard
+set clipboard=unnamedplus

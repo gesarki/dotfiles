@@ -15,9 +15,14 @@ Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ThePrimeagen/vim-be-good'
+Plug 'andymass/vim-matchup'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive' " git commands
+Plug 'tpope/vim-rhubarb' " open file in github in browser
 call plug#end()
 
 autocmd vimenter * colorscheme gruvbox
 " setting gruvbox theme
 let g:airline_theme='gruvbox' " set airline theme
+let g:airline#extensions#tabline#enabled = 1 " show all buffers when 1 tab open
 autocmd vimenter * AirlineRefresh
